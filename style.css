@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    font-size: 100%;
+    font-family: 'Righteous', cursive;
+    background: linear-gradient(68.15deg, #301313 16.62%, #924141 85.61%);
+}
+.cabecalho{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 24px;
+}
+.cabecalho-imagem{
+    width: 72px;
+}
+.cabecalho-menu{
+    display: flex;
+    gap: 32px;
+}
+.cabecalho-menu-item{
+    font-family: 'Sarala', sans-serif;
+    color: #FFF2E7;
+    font-weight: 400;
+    font-size: 18px;
+}
+.conteudo{
+    margin-bottom: 48px;
+    border-top: 0.4px solid #FFF2E7;
+}
+.conteudo-principal{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.conteudo-principal-escrito{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.conteudo-principal-escrito-titulo{
+    font-family: 'Righteous', cursive;
+    font-weight: 400;
+    font-size: 64px;
+    color: #FFF2E7;
+}
+.conteudo-principal-escrito-subtitulo{
+    font-family: 'Sarala', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: #FFF2E7;
+}
+.conteudo-principal-escrito-botao{
+    background-color: #ECC4C4;
+    width: 185px;
+    height: 67px;
+    border: none;
+    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    font-family: 'Sarala', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: #2F2325;
+}
+.conteudo-principal-escrito-botao:hover{
+    background-color: #924141;
+    color: #ECC4C4;
+    box-shadow: 0 0 15px rgb(196, 82, 74);
+    cursor: pointer;
+}
+.conteudo-secundario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #FFF2E7;
+    gap: 24px;
+    margin-top: 48px;
+}
+.conteudo-secundario-titulo{
+    border-top: 0.4px solid #FFF2E7;
+    padding-top: 48px;
+    font-weight: 400;
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+.conteudo-secundario-paragrafo{
+    font-family: 'Sarala', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    color: #ECC4C4;
+}
+.rodape{
+    padding: 32px;
+    margin-top: 100px;
+    border-top: 0.4px solid #FFF2E7;
+}
+.rodape-imagem{
+    height: 130px;
+    display: block;
+    margin: 0 auto;
+}
+.rodape-botao{
+    background-color: transparent;
+    width: 100px;
+    height: 67px;
+    border: none;
+    border-radius: 20px;
+    font-family: 'Sarala', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+}
+.rodape-botao a {
+    text-decoration: none;
+    color: #2F2325;
+}
+
+@media (max-width: 820px) {
+    .conteudo{
+        flex-direction: column;
+        text-align: center;
+    }
+    .conteudo-principal{
+        flex-direction: column;
+    }
+    .conteudo-principal-imagem{
+        order: -1;
+    }
+    .conteudo-secundario-paragrafo{
+        padding: 10px;
+    }
+    .rodape-imagem{
+        height: 7rem;
+    }
+}
+@media (max-width: 700px) {
+    .cabecalho{
+        justify-content: space-between;
+    }
+    .menu .cabecalho-menu {
+        display: none;
+        flex-direction: space-between;
+        margin: 15px;
+    }
+    .menu.on{
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #B65555;
+        width: 100vw;
+        height: 110vh;
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .um,
+    .dois,
+    .tres {
+        background-color: #ffffff;
+        height: 5px;
+        width: 100%;
+        margin: 6px auto;
+        border-radius: 20%;
+        transition-duration: 0.3s;
+    }
+    .menu.on .cabecalho-menu {
+        display: block;
+    }
+    .menu-responsivo{
+        width: 40px;
+        height: 30px;
+        margin: 10px;
+    }
+    .menu.on .menu-responsivo{
+        position: absolute;
+        right: 10px;
+        top: 15px;
+    }
+    .menu.on .menu-responsivo .um{
+        transform: rotate(45deg) translate(7px, 7px);
+    }
+    .menu.on .menu-responsivo .dois{
+        opacity: 0;
+    }
+    .menu.on .menu-responsivo .tres{
+        transform: rotate(-45deg) translate(8px, -8px);
+    }
+    .cabecalho-menu {
+        text-align: center;
+        display: block;
+    }
+    .cabecalho-menu .cabecalho-menu-item{
+        transition-duration: 0.5s;
+        font-size: 1.8em;
+        line-height: 4em;
+        display: block;
+    }
+}
+@media (max-width: 360px){
+    .conteudo-principal-imagem{
+        height: 14rem;
+    }
+    .rodape-imagem{
+        height: 3rem;
+    }
+}
